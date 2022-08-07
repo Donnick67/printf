@@ -21,6 +21,7 @@ int out_specs(char nt, va_list args)
 		{"x", specs_h},
 		{"X", specs_H},
 {"S", specs_S},
+{"b", specs_b},
 		{NULL, NULL}
 	};
 
