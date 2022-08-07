@@ -4,7 +4,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <unistd.h>
 /**
  * struct specs_id - structs
  * @spec: custom type group
