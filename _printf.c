@@ -2,7 +2,7 @@
 
 
 /**
- * _printf function for printing outputs
+ * _printf - function for printing outputs
  * Description: prints output
  * @format: string argument
  * Return: output

@@ -25,13 +25,13 @@ int out_specs(char nt, va_list args)
 	specs_id cmp[] = {
 		{"c", specs_c},
 		{"s", specs_s},
-        {"d", specs_d},
+{"d", specs_d},
 		{"i", specs_d},
-        {"u", specs_u},
-        {"o", specs_o},
+{"u", specs_u},
+{"o", specs_o},
 		{"x", specs_h},
 		{"X", specs_H},
-        {"S", specs_S},
+{"S", specs_S},
 		{NULL, NULL}
 	};
 

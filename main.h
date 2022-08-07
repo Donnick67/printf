@@ -7,7 +7,7 @@
 
 int _putchar(char c);
 int out_specs(char next, va_list args);
-int _printf(const char *format, ...); 
+int _printf(const char *format, ...);
 int specs_c(va_list args);
 int specs_s(va_list args);
 int specs_d(va_list args);
