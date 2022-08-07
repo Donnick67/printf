@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  * specs_h - outputs lower case
