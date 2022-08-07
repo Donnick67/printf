@@ -1,4 +1,4 @@
-lude "main.h"
+#include "main.h"
 
 /**
  * struct specs_id - structs
