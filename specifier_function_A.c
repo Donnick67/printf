@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  * specs_c - ouput single character
