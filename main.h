@@ -4,17 +4,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
-
-/**
- * struct specs_id - structs
- * @spec: custom type group
- * @outs: print
- */
-typedef struct specs_id
-{
-char *spec;
-int (*outs)(va_list);
-} specs_id;
+#include "type.h"
 
 int _putchar(char c);
 int out_specs(char next, va_list args);
@@ -29,6 +19,7 @@ int specs_h(va_list args);
 int specs_H(va_list args);
 int specs_S(va_list args);
 int specs_u_h(unsigned int count, char s);
+int specs_u_b(va_list arg);
 void specs_b(unsigned int s, unsigned int *p);
 
 #endif

@@ -42,7 +42,7 @@ return (k);
 int specs_d(va_list args)
 {
 
-unsigned int divisor = 1, k, resp, c_out = 0;
+unsigned int d = 1, k, resp, c_out = 0;
 int n = va_arg(args, int);
 
 if (n < 0)
@@ -52,12 +52,12 @@ if (n < 0)
 	n *= -1;
 }
 
-for (k = 0; n / divisor > 9; k++, divisor *= 10)
+for (k = 0; n / d > 9; k++, d *= 10)
 ;
 
-for (; divisor >= 1; n %= divisor, divisor /= 10, c_out++)
+for (; d >= 1; n %= d, d /= 10, c_out++)
 {
-	resp = n / divisor;
+	resp = n / d;
 	_putchar('0' + resp);
 }
 return (c_out);
@@ -73,15 +73,15 @@ return (c_out);
 
 int specs_u(va_list args)
 {
-int divisor = 1, k, resp;
+int d = 1, k, resp;
 unsigned int n = va_arg(args, unsigned int);
 
-for (k = 0; n / divisor > 9; k++, divisor *= 10)
+for (k = 0; n / d > 9; k++, d *= 10)
 ;
 
-for (; divisor >= 1; n %= divisor, divisor /= 10)
+for (; d >= 1; n %= d, d /= 10)
 {
-	resp = n / divisor;
+	resp = n / d;
 	_putchar('0' + resp);
 }
 return (k + 1);
