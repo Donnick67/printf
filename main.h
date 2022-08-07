@@ -29,7 +29,7 @@ int specs_h(va_list args);
 int specs_H(va_list args);
 int specs_S(va_list args);
 int specs_u_h(unsigned int count, char s);
-int specs_u_b(va_list arg);
+int specs_u_b(va_list args);
 void specs_b(unsigned int s, unsigned int *p);
 
 #endif
