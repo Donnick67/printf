@@ -1,53 +1,23 @@
-#include "main.h"
+#ifndef MAIN_H
+#define MAIN_H
 
+#include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-/**
- * _printf function for printing outputs
- * Description: prints output
- * @format: string argument
- * Return: output
- */
+int _putchar(char c);
+int out_specs(char next, va_list args);
+int _printf(const char *format, ...); 
+int specs_c(va_list args);
+int specs_s(va_list args);
+int specs_d(va_list args);
+int specs_u(va_list args);
+int specs_o(va_list args);
+int specs_hex(va_list args, char s);
+int specs_h(va_list args);
+int specs_H(va_list args);
+int specs_S(va_list args);
+int specs_u_h(unsigned int count, char s);
 
-int _printf(const char *format, ...)
-{
-	unsigned int k;
-	int out = 0, c_out = 0;
-	va_list args;
+#endif
 
-	va_start(args, format);
-	if (format == NULL)
-		return (-1);
-
-	for (k = 0; format[k] != '\0'; k++)
-	{
-		if (format[k] != '%')
-		{
-			_putchar(format[k]);
-			c_out++;
-			continue;
-		}
-		if (format[k + 1] == '%')
-		{
-			_putchar('%');
-			c_out++;
-			k++;
-			continue;
-		}
-		if (format[k + 1] == '\0')
-			return (-1);
-
-		out = out_specs(format[k + 1], args);
-		if (out == -1 || out != 0)
-			k++;
-		if (out > 0)
-			c_out += out;
-
-		if (out == 0)
-		{
-			_putchar('%');
-			c_out++;
-		}
-	}
-	va_end(args);
-	return (c_out);
-}
