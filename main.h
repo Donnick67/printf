@@ -5,6 +5,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * struct specs_id - structs
+ * @spec: custom type group
+ * @outs: print
+ */
+typedef struct specs_id
+{
+char *spec;
+int (*outs)(va_list);
+} specs_id;
+
 int _putchar(char c);
 int out_specs(char next, va_list args);
 int _printf(const char *format, ...);
